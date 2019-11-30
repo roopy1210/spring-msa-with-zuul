@@ -1,0 +1,42 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: order-service
+    
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 1
+      maximum-pool-size: 5
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin!@34
+   
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate: 
+        format_sql: true
+        temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+
+#############################################################################
+# payment-service, product-service의 리본클라이언트에 대한 네트워크 주소 설정
+#############################################################################
+payment-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:7001
+    
+product-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:7002 

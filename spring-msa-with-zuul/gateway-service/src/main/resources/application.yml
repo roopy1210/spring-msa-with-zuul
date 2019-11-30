@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:8070}
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    order:
+      path: /order/**
+      url: http://localhost:7000/order
+    payment:
+      path: /payment/**
+      url: http://localhost:7001/payment
+    product:
+      path: /product/**
+      url: http://localhost:7002/products    
