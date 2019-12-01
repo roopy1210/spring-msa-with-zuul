@@ -7,9 +7,7 @@ zuul:
     order:
       path: /order/**
       url: http://localhost:7000/order
-    payment:
-      path: /payment/**
-      url: http://localhost:7001/payment
-    product:
-      path: /product/**
-      url: http://localhost:7002/products    
+
+    delivery:
+      path: /delivery/**
+      url: http://localhost:8000/delivery      

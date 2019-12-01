@@ -26,9 +26,9 @@ spring:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
 
-#############################################################################
-# payment-service, product-service의 리본클라이언트에 대한 네트워크 주소 설정
-#############################################################################
+##############################################################################
+# payment-service, product-service의 리본클라이언트에 대한 네트워크 주소 설정#
+##############################################################################
 payment-service:
   ribbon:
     eureka:

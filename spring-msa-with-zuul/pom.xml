@@ -40,5 +40,6 @@
 		<module>order-service</module>
 		<module>payment-service</module>
 		<module>product-service</module>
+		<module>delivery-service</module>
 	</modules>
 </project>
